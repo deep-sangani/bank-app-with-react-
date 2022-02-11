@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import NewCustomer from "./pages/NewCustomer/NewCustomer";
 import Deposit from "./pages/Deposit/Deposit";
 import Withdraw from "./pages/Withdraw/Withdraw";
-import Transaction from "./pages/Tranaction/Transaction";
+import Transaction from "./pages/Transaction/Transaction";
 import CustomerInfo from "./pages/CustomerInfo/CustomerInfo";
 function App() {
   const [auth, setAuth] = useState(false);

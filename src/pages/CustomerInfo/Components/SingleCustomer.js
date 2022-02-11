@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-export default function NewCustomer() {
+export default function SingleCustomer() {
   const inputFile = useRef(null);
   const onButtonClick = () => {
     // `current` points to the mounted file input element
@@ -8,8 +8,7 @@ export default function NewCustomer() {
   };
   return (
     <div>
-      <h3 className="font-bold text-lg">Add New Customer</h3>
-      <div className="flex justify-around mt-16 p-4 pr-10">
+      <div className="flex justify-around mt-10 p-4 pr-10">
         <div className="w-3/5 min-h-full  bg-white rounded-md p-4 mt-8">
           <h2 className="font-semibold text-lg">customer details</h2>
           <div className="grid grid-cols-2 my-8 gap-4 ">
@@ -99,22 +98,19 @@ export default function NewCustomer() {
           </div>
         </div>
         <div className=" min-h-full bg-white rounded-md p-4">
-          <div className="w-48 h-48 mx-auto rounded-full border-4 border-[#6160D0] flex items-center justify-center ">
-            {/* {file submit button} */}
-            <input
-              type="file"
-              name=""
-              className="hidden"
-              id="file"
-              ref={inputFile}
+          <div className=" ">
+            <img
+              className="w-48 h-48 mx-auto rounded-full border-4 border-[#6160D0] flex items-center justify-center"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+              alt=""
             />
-            <div
-              className="font-bold text-sm text-white py-2 px-4 rounded-2xl bg-[#6160d0] flex items-center justify-center cursor-pointer"
-              onClick={onButtonClick}
-            >
-              Add Profile pic
-              <span className="font-bold text-2xl ml-2 "> +</span>
-            </div>
+          </div>
+          <div
+            className="font-bold text-sm text-white  rounded-2xl bg-[#6160d0] flex items-center justify-center cursor-pointer w-fit px-2 py-1 mx-auto mt-2 mb-4"
+            onClick={onButtonClick}
+          >
+            update Profile pic
+            <span className="font-bold text-2xl ml-2 "> +</span>
           </div>
           <div className="grid grid-cols-1 gap-4">
             {/* {"aadhar number "} */}

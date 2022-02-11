@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import Customer from "./Components/Customer";
+import TranasctionHistory from "./Components/TransactionHistory";
 
-import SingleCustomer from "./Components/SingleCustomer";
+import SingleTransaction from "./Components/SingleTransaction";
 
-export default function CustomerInfo() {
-  const [customertinfo, setcustomerinfo] = useState("");
+export default function Transaction() {
+  const [accountinfo, setAccountinfo] = useState("");
   return (
     <div className="">
       <div className=" h-full  mt-16 ">
-        {!customertinfo ? (
+        {!accountinfo ? (
           <>
-            <h3 className="font-bold text-lg">Happy Customers 😃 </h3>
+            <h3 className="font-bold text-lg">Transaction History</h3>
 
-            <Customer setcustomerinfo={setcustomerinfo} />
+            <TranasctionHistory setAccountinfo={setAccountinfo} />
           </>
         ) : (
           <>
@@ -20,15 +20,15 @@ export default function CustomerInfo() {
               <button
                 className="btn px-4 py-1 mr-4 border-2 border-[#6160D0] hover:bg-slate-50 rounded text-sm "
                 onClick={() => {
-                  setcustomerinfo(false);
+                  setAccountinfo(false);
                 }}
               >
                 back
               </button>
-              <span>Customer Details</span>
+              <span>Transaction details</span>
             </h3>
 
-            <SingleCustomer customertinfo={customertinfo} />
+            <SingleTransaction accountinfo={accountinfo} />
           </>
         )}
       </div>
