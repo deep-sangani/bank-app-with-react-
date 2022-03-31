@@ -7,6 +7,7 @@ import user from "../../assets/icons/user.svg";
 import lock from "../../assets/icons/lock.svg";
 import elipse1 from "../../assets/images/elipse1.svg";
 import elipse2 from "../../assets/images/elipse2.svg";
+import login from "../../sdk/login";
 export default function Login({ setAuth }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,14 +15,22 @@ export default function Login({ setAuth }) {
   const { addToast } = useToasts();
 
   const submitHandler = async () => {
-    console.log(username, password);
-    if (username === "admin" && password === "admin") {
-      await setAuth(true);
-      await navigate("/main");
-    } else {
-      addToast(<h1 className="text-lg">wrong credentials</h1>, {
-        appearance: "error",
-      });
+    try {
+      if (username && password) {
+        const { data } = await login({ empid: username, password: password });
+        console.log(data);
+        if (data.status === "success") {
+          await localStorage.setItem("token", data.token);
+          await setAuth(true);
+          await navigate("/main");
+        } else {
+          addToast(<h1 className="text-lg">wrong credentials</h1>, {
+            appearance: "error",
+          });
+        }
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
   return (

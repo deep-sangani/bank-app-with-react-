@@ -3,6 +3,7 @@ import logout from "../assets/icons/Logout.svg";
 export default function LogoutBtn() {
   const logoutHandler = () => {
     localStorage.removeItem("auth");
+    localStorage.removeItem("token");
     window.location.href = "/";
   };
   return (

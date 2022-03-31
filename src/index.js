@@ -6,7 +6,7 @@ import { ToastProvider } from "react-toast-notifications";
 
 render(
   <BrowserRouter>
-    <ToastProvider autoDismiss={true} autoDismissTimeout={2000}>
+    <ToastProvider autoDismiss={true} autoDismissTimeout={3000}>
       <App />
     </ToastProvider>
   </BrowserRouter>,

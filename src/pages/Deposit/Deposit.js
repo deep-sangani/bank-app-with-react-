@@ -27,7 +27,10 @@ export default function Deposit() {
               </button>
               <span>Deposit</span>
             </h3>
-            <DepositInfo />
+            <DepositInfo
+              accountinfo={accountinfo}
+              setAccountinfo={setAccountinfo}
+            />
           </>
         )}
       </div>

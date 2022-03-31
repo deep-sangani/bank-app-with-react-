@@ -9,6 +9,7 @@ import Deposit from "./pages/Deposit/Deposit";
 import Withdraw from "./pages/Withdraw/Withdraw";
 import Transaction from "./pages/Transaction/Transaction";
 import CustomerInfo from "./pages/CustomerInfo/CustomerInfo";
+import Transfer from "./pages/TransferBalance/Transfer";
 function App() {
   const [auth, setAuth] = useState(false);
   const authfromlc = localStorage.getItem("auth");
@@ -54,13 +55,14 @@ function App() {
         <Route path="withdraw" element={<Withdraw />} />
         <Route path="transaction" element={<Transaction />} />
         <Route path="customerinfo" element={<CustomerInfo />} />
+        <Route path="transfer" element={<Transfer />} />
       </Route>
       <Route path="/login" element={<ProtectedLogin />} />
       <Route
         path="*"
         element={
           <main style={{ padding: "1rem" }}>
-            <p>There's nothing here!</p>
+            <p>oops page is not found!</p>
           </main>
         }
       />

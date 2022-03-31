@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import LogoutBtn from "../../GlobalComponents/LogoutBtn";
 import Logo from "../../assets/images/logo.svg";
@@ -6,7 +6,7 @@ import Menu from "./Components/Menu";
 
 export const DashboardContainer = () => {
   return (
-    <div className="w-screen h-screen flex">
+    <div className="w-screen h-screen flex ">
       <div className="w-1/5 h-screen">
         <div className="flex justify-center items-center mt-4">
           <img src={Logo} alt="" className="w-44" />

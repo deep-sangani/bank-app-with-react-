@@ -28,7 +28,10 @@ export default function Withdraw() {
               </button>
               <span>Withdraw</span>
             </h3>
-            <WithdrawInfo />
+            <WithdrawInfo
+              accountinfo={accountinfo}
+              setAccountinfo={setAccountinfo}
+            />
           </>
         )}
       </div>

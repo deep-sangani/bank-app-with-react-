@@ -12,6 +12,8 @@ import TransactionGray from "../../../assets/icons/TransactionGray.svg";
 import TransactionPurple from "../../../assets/icons/TransactionPurple.svg";
 import CustomerInfoGray from "../../../assets/icons/CustomerInfoGray.svg";
 import CustomerInfoPurple from "../../../assets/icons/CustomerInfoPurple.svg";
+import TransferPurple from "../../../assets/icons/transferPurple.svg";
+import TransferGray from "../../../assets/icons/transferGray.svg";
 function Menu() {
   const [menucount, setMenuCount] = useState(1);
   return (
@@ -133,6 +135,26 @@ function Menu() {
             } `}
           >
             Customer Info
+          </span>
+        </div>
+      </Link>
+      {/* transfer */}
+      <Link to="/main/transfer">
+        <div
+          className="flex items-center cursor-pointer hover:bg-[#f5f5f5] pl-16 py-4 "
+          onClick={() => setMenuCount(7)}
+        >
+          <img
+            src={menucount === 7 ? TransferPurple : TransferGray}
+            alt=""
+            className="w-8"
+          />
+          <span
+            className={`ml-4 font-bold ${
+              menucount === 7 ? "text-black" : "text-[#8E8EA1]"
+            } `}
+          >
+            Transfer Balance
           </span>
         </div>
       </Link>
