@@ -171,6 +171,7 @@ export default function LettestTransaction() {
                             ₹ {obj.amount}
                           </div>
                         </td>
+
                         <td class="px-6 py-4 w-full">
                           <span class="p-2 inline-flex text-xs leading-5 font-semibold rounded bg-green-100 text-green-800 ">
                             {" "}
